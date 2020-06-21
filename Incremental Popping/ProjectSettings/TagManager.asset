@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Small Ball
+  - Big Ball
+  - Text
   - 
   - 
   - 
@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4128199929
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Balls
+    uniqueID: 1032504201
+    locked: 0
+  - name: Ball Value Text
+    uniqueID: 627759677
     locked: 0
