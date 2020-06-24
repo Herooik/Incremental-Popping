@@ -9,38 +9,38 @@ public class BallOnTriggerBehaviour : MonoBehaviour
     [SerializeField] private CircleCollider2D thisCircleCollider2D;
     [SerializeField] private SpriteRenderer thisSpriteRenderer;
     [SerializeField] private Canvas canvas;
-    [SerializeField] private IntReference popSize;
     [SerializeField] private BallValueController ballValueController;
-    [SerializeField] private BallLifeController ballLifeController;
+    [SerializeField] private PopLifeTime popLifeTime;
 
     private bool _isBallTouched;
     private float _scaleValue;
-    
+
+    private static int _layerNumber;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        _scaleValue = Mathf.Sqrt(popSize.Value);
-        transform.localScale = new Vector3(_scaleValue, _scaleValue, 1);
-        ballRigidbody.velocity = Vector2.zero;
-
         if (!_isBallTouched)
         {
             ChangeLayers(other);
-            SetBallValue(other);
-
-            ballLifeController.enabled = true;
             
-            _isBallTouched = true;
-        }
+            SetBallValue(other);
+            
+            ballRigidbody.velocity = Vector2.zero;
 
-        thisCircleCollider2D.isTrigger = true;
+            popLifeTime.enabled = true;
+
+            _isBallTouched = true;
+
+            thisCircleCollider2D.isTrigger = true;
+        }
     }
 
     private void ChangeLayers(Collider2D other)
     {
         gameObject.layer = LayerMask.NameToLayer("Big Ball");
 
-        var currentBallOrderLayer = other.GetComponent<SpriteRenderer>().sortingOrder;
-        thisSpriteRenderer.sortingOrder = currentBallOrderLayer + 1;
+        _layerNumber += 1;
+        thisSpriteRenderer.sortingOrder = _layerNumber;
 
         canvas.sortingOrder = thisSpriteRenderer.sortingOrder;
         canvas.gameObject.SetActive(true);

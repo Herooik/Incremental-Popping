@@ -7,6 +7,7 @@ using UnityEngine;
 public class BallValueController : MonoBehaviour
 {
     [SerializeField] private FloatReference multiplier;
+    [SerializeField] private IntReference roundScore;
     [SerializeField] private int value = 10;
     [SerializeField] private TextMeshProUGUI valueText;
 
@@ -24,5 +25,7 @@ public class BallValueController : MonoBehaviour
     {
         value = (int)newValue;
         valueText.text = value.ToString();
+        
+        roundScore.Value += value;
     }
 }
