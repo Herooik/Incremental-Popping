@@ -4,24 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class PopLifeTime : MonoBehaviour
+public class PopAnimation : MonoBehaviour
 {
-    [SerializeField] private IntReference popCount;
     [SerializeField] private FloatReference popTime;
-    [SerializeField] private IntReference popSize;
-    [SerializeField] private CircleCollider2D thisCollider;
-    
+    [SerializeField] private FloatReference popSize;
+
     private float _scaleValue;
     private float _maxScaleValue;
     private float _minScaleValue;
 
     private void Start()
     {
-        popCount.Value++;
-
         StartCoroutine(ShowPopAnimation());
         
-        StartCoroutine(Hide());
+        StartCoroutine(HidePop());
     }
 
     IEnumerator ShowPopAnimation()
@@ -31,29 +27,21 @@ public class PopLifeTime : MonoBehaviour
         _minScaleValue = _scaleValue - 0.2f;
         
         var targetScale = new Vector3(_maxScaleValue, _maxScaleValue);
-        var myTween = transform.DOScale(targetScale, 0.5f);
+        var myTween = transform.DOScale(targetScale, 0.2f);
         yield return myTween.WaitForCompletion();
 
         targetScale = new Vector3(_minScaleValue, _minScaleValue);
-        myTween = transform.DOScale(targetScale, 0.5f);
+        myTween = transform.DOScale(targetScale, 0.2f);
         yield return myTween.WaitForCompletion();
 
         targetScale = new Vector3(_scaleValue, _scaleValue);
-        myTween = transform.DOScale(targetScale, 0.5f);
+        myTween = transform.DOScale(targetScale, 0.2f);
         yield return myTween.WaitForCompletion();
     }
 
-    IEnumerator Hide()
+    IEnumerator HidePop()
     {
         yield return new WaitForSeconds(popTime.Value);
-        transform.DOScale(0, 0.5f);
-
-        thisCollider.enabled = false;
-
-        popCount.Value--;
-        if (popCount.Value == 0)
-        {
-            ScoreManager.Instance.AddRoundScoreToAllScore();
-        }
+        transform.DOScale(0, 0.3f);
     }
 }

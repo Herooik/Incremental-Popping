@@ -10,7 +10,7 @@ public class SmallBallSpawnManager : MonoBehaviour
     
     [SerializeField] private GameObject smallBall;
     [SerializeField] private SpriteRenderer smallBallRenderer;
-    [SerializeField] private IntReference amountToSpawn;
+    [SerializeField] private FloatReference amountToSpawn;
     [Header("Spawn Position Range")]
     [SerializeField] [Range(0,8)] private float posX = 8;
     [SerializeField] [Range(0, 3)] private float posY = 3;
@@ -27,6 +27,11 @@ public class SmallBallSpawnManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        SpawnSmallBalls();
     }
 
     public void SpawnSmallBalls()

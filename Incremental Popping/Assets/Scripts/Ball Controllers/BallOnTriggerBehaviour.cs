@@ -8,9 +8,10 @@ public class BallOnTriggerBehaviour : MonoBehaviour
     [SerializeField] private Rigidbody2D ballRigidbody;
     [SerializeField] private CircleCollider2D thisCircleCollider2D;
     [SerializeField] private SpriteRenderer thisSpriteRenderer;
-    [SerializeField] private Canvas canvas;
+    [SerializeField] private Canvas ballCanvas;
     [SerializeField] private BallValueController ballValueController;
-    [SerializeField] private PopLifeTime popLifeTime;
+    [SerializeField] private PopAnimation popAnimation;
+    [SerializeField] private PopCountController popCountController;
 
     private bool _isBallTouched;
     private float _scaleValue;
@@ -27,11 +28,12 @@ public class BallOnTriggerBehaviour : MonoBehaviour
             
             ballRigidbody.velocity = Vector2.zero;
 
-            popLifeTime.enabled = true;
-
-            _isBallTouched = true;
+            popAnimation.enabled = true;
+            popCountController.enabled = true;
 
             thisCircleCollider2D.isTrigger = true;
+            
+            _isBallTouched = true;
         }
     }
 
@@ -42,8 +44,8 @@ public class BallOnTriggerBehaviour : MonoBehaviour
         _layerNumber += 1;
         thisSpriteRenderer.sortingOrder = _layerNumber;
 
-        canvas.sortingOrder = thisSpriteRenderer.sortingOrder;
-        canvas.gameObject.SetActive(true);
+        ballCanvas.sortingOrder = thisSpriteRenderer.sortingOrder;
+        ballCanvas.gameObject.SetActive(true);
     }
 
     private void SetBallValue(Collider2D other)

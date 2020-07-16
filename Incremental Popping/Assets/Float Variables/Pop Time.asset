@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a08f69b8876a44db9f7c4c89546e73, type: 3}
   m_Name: Pop Time
   m_EditorClassIdentifier: 
-  Value: 3
+  Value: 1.7

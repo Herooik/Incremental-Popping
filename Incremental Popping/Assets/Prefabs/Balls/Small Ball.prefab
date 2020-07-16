@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 650711823}
   - component: {fileID: -5261153569246146728}
   - component: {fileID: -4148634422847299067}
+  - component: {fileID: 1434617292780068514}
   m_Layer: 8
   m_Name: Small Ball
   m_TagString: Untagged
@@ -333,7 +334,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b93e84d78dddec642ac7e641033d0ce3, type: 3}
-  m_Color: {r: 0.24534568, g: 0.29968962, b: 0.3009067, a: 1}
+  m_Color: {r: 0.2802488, g: 0.0629285, b: 0.58224434, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -409,9 +410,10 @@ MonoBehaviour:
   ballRigidbody: {fileID: 7359705855668044347}
   thisCircleCollider2D: {fileID: 5002297949658289066}
   thisSpriteRenderer: {fileID: 7359705855668044344}
-  canvas: {fileID: 1366639248}
+  ballCanvas: {fileID: 1366639248}
   ballValueController: {fileID: -5261153569246146728}
-  popLifeTime: {fileID: -4148634422847299067}
+  popAnimation: {fileID: -4148634422847299067}
+  popCountController: {fileID: 1434617292780068514}
 --- !u!114 &-5261153569246146728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,10 +448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb973b7fc814aa4ebced0617eb69b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popCount:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 70dc81fe57503354d9c2bf9aaaa9dece, type: 2}
   popTime:
     UseConstant: 0
     ConstantValue: 0
@@ -457,5 +455,25 @@ MonoBehaviour:
   popSize:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: c1e8bcba9a75f9042a00bdfe3d52f8f4, type: 2}
+    Variable: {fileID: 11400000, guid: 91fdc189c9a678f438b873560c69f842, type: 2}
+--- !u!114 &1434617292780068514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359705855668044346}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c10dca447fe38647b8c6924c75417a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popCount:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: fdf853d57a5c57d41a56d138391a187d, type: 2}
+  popTime:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: d3f4b122571755049be26739fc54b793, type: 2}
   thisCollider: {fileID: 5002297949658289066}

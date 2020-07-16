@@ -50,6 +50,6 @@ MonoBehaviour:
   amountToSpawn:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: cb942da822f46f9439057bca709943e1, type: 2}
+    Variable: {fileID: 11400000, guid: 85960f2daee060e498f44fd0ba01b33b, type: 2}
   posX: 8
   posY: 3

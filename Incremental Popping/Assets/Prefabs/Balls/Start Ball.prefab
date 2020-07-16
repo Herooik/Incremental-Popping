@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 1333728141771236579}
   - component: {fileID: 443184002315232454}
   - component: {fileID: 1114524941}
+  - component: {fileID: -4907887799570141629}
   m_Layer: 9
   m_Name: Start Ball
   m_TagString: Untagged
@@ -393,7 +394,7 @@ MonoBehaviour:
   popCount:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 70dc81fe57503354d9c2bf9aaaa9dece, type: 2}
+    Variable: {fileID: 11400000, guid: fdf853d57a5c57d41a56d138391a187d, type: 2}
   popTime:
     UseConstant: 0
     ConstantValue: 0
@@ -401,5 +402,25 @@ MonoBehaviour:
   popSize:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: c1e8bcba9a75f9042a00bdfe3d52f8f4, type: 2}
+    Variable: {fileID: 11400000, guid: 91fdc189c9a678f438b873560c69f842, type: 2}
+--- !u!114 &-4907887799570141629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2530485714866483101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c10dca447fe38647b8c6924c75417a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popCount:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: fdf853d57a5c57d41a56d138391a187d, type: 2}
+  popTime:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: d3f4b122571755049be26739fc54b793, type: 2}
   thisCollider: {fileID: 1333728141771236579}

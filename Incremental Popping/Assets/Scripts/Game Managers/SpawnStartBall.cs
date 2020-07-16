@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 public class SpawnStartBall : MonoBehaviour
 {
     [SerializeField] private GameObject startBall;
-    [SerializeField] private IntReference popSize;
 
     private bool _isSpawned;
 
@@ -31,6 +30,8 @@ public class SpawnStartBall : MonoBehaviour
             spawnPosition.z = 0;
 
             SpawnBall(spawnPosition);
+            
+            this.enabled = false;
         }
     }
 

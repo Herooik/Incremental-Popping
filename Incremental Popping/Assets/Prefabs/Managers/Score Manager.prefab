@@ -43,8 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf1c1d4561731746ab34a90ddc87f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundScoreText: {fileID: 0}
-  allScoreText: {fileID: 0}
   roundScore:
     UseConstant: 0
     ConstantValue: 0

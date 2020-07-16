@@ -9,8 +9,6 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
     
-    [SerializeField] private TextMeshProUGUI roundScoreText;
-    [SerializeField] private TextMeshProUGUI allScoreText;
     [SerializeField] private IntReference roundScore;
     [SerializeField] private IntReference allScore;
     [SerializeField][Range(0,5f)] private float pauseTimeAfterEndRound = 2f;
@@ -26,19 +24,6 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-        roundScore.Value = 0;
-        roundScoreText.text = "+" + roundScore.Value;
-        allScoreText.text = "$" + allScore.Value;
-    }
-
-    private void Update()
-    {
-        roundScoreText.text = "+" + roundScore.Value;
-        allScoreText.text = "$" + allScore.Value;
     }
 
     public void AddRoundScoreToAllScore()
@@ -62,6 +47,7 @@ public class ScoreManager : MonoBehaviour
             yield return new WaitForSeconds(pauseTimeAfterScoreSummary);
         }
 
-        UIManager.Instance.MoveToTheShop();
+        
+        CurtainController.Instance.MoveToTheShop();
     }
 }
