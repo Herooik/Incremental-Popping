@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3601451193976052260}
   - component: {fileID: 3601451193976052262}
+  - component: {fileID: 1883040483}
+  - component: {fileID: 1261689968}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -45,3 +47,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startBall: {fileID: 2530485714866483101, guid: cf2dabd79e0f0a146b7964a22e124a89,
     type: 3}
+--- !u!114 &1883040483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3601451193976052263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6c7788a79ae364d8cfde5bc45dfabb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballAmount:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 85960f2daee060e498f44fd0ba01b33b, type: 2}
+  multiplier:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 144f0fe06d5c0424a8429cb85a7e7f10, type: 2}
+  popSize:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 91fdc189c9a678f438b873560c69f842, type: 2}
+  popTime:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: d3f4b122571755049be26739fc54b793, type: 2}
+--- !u!114 &1261689968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3601451193976052263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd70b0e734886c4e99192e8d85fa95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 8720223351922140268, guid: 7f492ba441b72df40aa1ebdd1739439e, type: 3}

@@ -74,5 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a054ac6b255274fbcecd806016e96a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradePrefab: {fileID: 0}
+  upgradePrefab: {fileID: 6223600572866209465, guid: ed2ae08d049944c4c9022153673f61b1,
+    type: 3}
+  descriptionText: {fileID: 0}
   upgrades: []

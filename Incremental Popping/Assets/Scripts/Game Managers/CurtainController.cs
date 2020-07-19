@@ -16,7 +16,6 @@ public class CurtainController : MonoBehaviour
     [SerializeField] private Canvas shopCanvas;
     [SerializeField] private TextMeshProUGUI descriptionText;
 
-
     private void Awake()
     {
         if (Instance == null)

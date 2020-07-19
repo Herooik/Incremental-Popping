@@ -11,7 +11,10 @@ public class UpgradeData : ScriptableObject
     [SerializeField] private FloatVariable valueToUpgrade;
     [SerializeField] private float startValue;
     [SerializeField] private float maxValue;
+    [SerializeField] private int indexUpgradeCost;
     [SerializeField] private List<double> upgradeCost;
+
+    private float _valueToAdd;
 
     
     public string GetName()
@@ -21,7 +24,11 @@ public class UpgradeData : ScriptableObject
     
     public string GetDescription()
     {
-        return description;
+        if (IsMaxUpgrade())
+        {
+            return description + "\n" + upgradeName + " is maxed out!";
+        }
+        return description + "\nNext upgrade cost: " + upgradeCost[indexUpgradeCost];
     }
 
     public float GetVariable()
@@ -39,9 +46,35 @@ public class UpgradeData : ScriptableObject
         return maxValue;
     }
 
+    public double GetUpgradeCost()
+    {
+        if (IsMaxUpgrade())
+        {
+            return double.NaN;
+        }
+
+        return upgradeCost[indexUpgradeCost];
+    }
+
+    public bool IsMaxUpgrade()
+    {
+        if (indexUpgradeCost == upgradeCost.Count)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public void UpgradeValue()
+    {
+        valueToUpgrade.Value += _valueToAdd;
+        indexUpgradeCost++;
+    }
+
     public float GetValueToAdd()
     {
-        var value = (maxValue - valueToUpgrade.Value) / upgradeCost.Count;
-        return value;
+        _valueToAdd = (maxValue - valueToUpgrade.Value) / upgradeCost.Count;
+        return _valueToAdd;
     }
 }

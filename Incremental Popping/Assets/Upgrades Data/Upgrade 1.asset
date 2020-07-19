@@ -17,6 +17,7 @@ MonoBehaviour:
   valueToUpgrade: {fileID: 11400000, guid: 144f0fe06d5c0424a8429cb85a7e7f10, type: 2}
   startValue: 1.1
   maxValue: 2.6
+  indexUpgradeCost: 0
   upgradeCost:
   - 1
   - 2

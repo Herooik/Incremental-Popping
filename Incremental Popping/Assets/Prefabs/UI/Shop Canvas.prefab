@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 38.399902, y: 0}
-  m_SizeDelta: {x: 1363.2001, y: 170.64001}
+  m_AnchoredPosition: {x: 38.399414, y: 25}
+  m_SizeDelta: {x: 1687.6056, y: 170.64001}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &1372161447
 CanvasRenderer:
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 35.61
-  m_fontSizeBase: 35.61
+  m_fontSize: 50.3
+  m_fontSizeBase: 50.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -191,8 +191,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 550, y: -282}
-  m_SizeDelta: {x: 110, y: 100}
+  m_AnchoredPosition: {x: 716, y: -333}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1952474292
 CanvasRenderer:
@@ -317,10 +317,10 @@ RectTransform:
   m_Father: {fileID: 7962824515231430138}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.100097656, y: -1.5998535}
-  m_SizeDelta: {x: -76.66943, y: -344.5559}
+  m_AnchorMin: {x: 0, y: 0.157}
+  m_AnchorMax: {x: 1, y: 0.843}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4030293199080821081
 CanvasRenderer:
@@ -377,7 +377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7962824515231430138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -411,7 +411,7 @@ Canvas:
   m_GameObject: {fileID: 7962824515231430142}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -496,7 +496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 64, y: 0}
+  m_AnchoredPosition: {x: 64, y: -25}
   m_SizeDelta: {x: 541.2467, y: 142.1}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &7962824515707967491
@@ -635,6 +635,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2136691978382174852, guid: 6d7e260d49e25174f987a1377e83a7b0,
+        type: 3}
+      propertyPath: m_ChildScaleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136691978382174852, guid: 6d7e260d49e25174f987a1377e83a7b0,
+        type: 3}
+      propertyPath: m_ChildScaleHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2136691978382174853, guid: 6d7e260d49e25174f987a1377e83a7b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -713,12 +723,12 @@ PrefabInstance:
     - target: {fileID: 2136691978382174853, guid: 6d7e260d49e25174f987a1377e83a7b0,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.06
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2136691978382174853, guid: 6d7e260d49e25174f987a1377e83a7b0,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.3
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2136691978382174853, guid: 6d7e260d49e25174f987a1377e83a7b0,
         type: 3}
@@ -744,6 +754,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Upgrade Window
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136691978382174906, guid: 6d7e260d49e25174f987a1377e83a7b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2136691979828322082, guid: 6d7e260d49e25174f987a1377e83a7b0,
         type: 3}

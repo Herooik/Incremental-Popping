@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3095145971339782467}
   - component: {fileID: 3095145971339782466}
   - component: {fileID: 3095145971339782465}
+  - component: {fileID: -6230268118401893728}
   m_Layer: 5
   m_Name: Buy Button
   m_TagString: Untagged
@@ -117,4 +118,36 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3095145971339782466}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -6230268118401893728}
+        m_MethodName: CanBuyUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-6230268118401893728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3095145971339782471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8254f94f5a93814da39e7c7776619cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonImage: {fileID: 3095145971339782466}
+  activeImage: {fileID: 21300000, guid: 0e4d48e62d043e048a537497acae6065, type: 3}
+  disableImage: {fileID: 21300000, guid: 0b41c674bf92d88479ee24e6812dcc0f, type: 3}
+  thisButton: {fileID: 3095145971339782465}
+  allScore:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: cf47df57a30d281458151613def973d0, type: 2}
+  upgradeData: {fileID: 0}

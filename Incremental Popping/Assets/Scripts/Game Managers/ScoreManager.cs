@@ -46,7 +46,6 @@ public class ScoreManager : MonoBehaviour
 
             yield return new WaitForSeconds(pauseTimeAfterScoreSummary);
         }
-
         
         CurtainController.Instance.MoveToTheShop();
     }
